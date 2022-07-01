@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  all: unset;
+  border: 0;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #2e6600;
+  border: 1px solid #2e6600;
+  color: #fff;
+}
+
+input {
+  all: unset;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #2e6600;
+}
+
+.component-container {
+  padding: 50px;
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.divisor {
+  margin: 25px 0;
+}
