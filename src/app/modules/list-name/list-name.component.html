@@ -1,6 +1,9 @@
 <section>
   <h1>List Name Component</h1>
   <ul>
-    <li *ngFor="let name of nameList$ | async">{{name}}</li>
+    <li *ngFor="let name of nameList$ | async">
+      <span>{{name}}</span>
+      <button (click)="removeName(name)">Remover</button>
+    </li>
   </ul>
 </section>
