@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { debounceTime, mergeMap, switchMap } from 'rxjs';
+import { debounceTime, switchMap } from 'rxjs';
 
 import { filterName } from './../../shared/+ state/name/name.selectors';
 
@@ -18,7 +18,7 @@ export class GetNameComponent implements OnInit {
     this.filterNameInput.valueChanges
       .pipe(
         debounceTime(500),
-        mergeMap((value) => this.store.select(filterName(value)))
+        switchMap((value) => this.store.select(filterName(value)))
       )
       .subscribe((value) => {
         console.log(value);
