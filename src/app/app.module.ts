@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { InputNameModule } from './modules/input-name/input-name.module';
 import { GetNameModule } from './modules/get-name/get-name.module';
 import { environment } from '../environments/environment';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],

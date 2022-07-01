@@ -1,8 +1,8 @@
 <section>
   <h1>Input Name Component</h1>
   <div class="input-name">
-    <input type="text" placeholder="Digite um nome">
-    <button>Adicionar Nome</button>
+    <input (keyup.enter)="addName()" [formControl]="inputName" type="text" placeholder="Digite um nome">
+    <button (click)="addName()">Adicionar Nome</button>
   </div>
   <hr class="divisor">
 </section>
