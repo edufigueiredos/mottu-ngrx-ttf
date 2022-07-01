@@ -2,14 +2,14 @@ import {
   nameReducer,
   nameStateKey,
 } from './../../shared/+ state/name/name.reducers';
+import { StoreModule } from '@ngrx/store';
+import { GetNameComponent } from './get-name.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InputNameComponent } from './input-name.component';
-import { StoreModule } from '@ngrx/store';
 
 @NgModule({
-  declarations: [InputNameComponent],
+  declarations: [GetNameComponent],
   imports: [CommonModule, StoreModule.forFeature(nameStateKey, nameReducer)],
-  exports: [InputNameComponent],
+  exports: [GetNameComponent],
 })
-export class InputNameModule {}
+export class GetNameModule {}
