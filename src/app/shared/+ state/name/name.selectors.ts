@@ -7,11 +7,9 @@ export const nameSelector = createFeatureSelector<NameState>(nameStateKey);
 export const getNames = createSelector(nameSelector, (state) => state.names);
 export const filterName = (name: string) =>
   createSelector(getNames, (state) => {
-    if (name.length) {
-      return state.filter((nameToFind) => nameToFind.toLocaleLowerCase().includes(name.toLocaleLowerCase()));
-    }
-
-    return state
+    return state.filter((nameToFind) =>
+      nameToFind.toLocaleLowerCase().includes(name.toLocaleLowerCase())
+    );
   });
 export const getLastName = createSelector(
   getNames,
